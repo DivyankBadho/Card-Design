@@ -1,6 +1,9 @@
 import React from "react";
 import { View ,Text,StyleSheet,Image} from "react-native";
-import HeartFilled from "@ant-design/icons";
+import { AntDesign,Entypo } from '@expo/vector-icons';
+
+
+
 
 const Card=()=>{
     return(
@@ -11,13 +14,24 @@ const Card=()=>{
                     <Text style={styles.recipeTitle}> shrimp and corizo paella</Text>
                     <Text style={styles.recipeTitle}>  August 25,2023</Text>
                    </View>
-                  
+                   <View style={{marginLeft:90}}>
+                   <Entypo name="dots-three-vertical" size={24} color="white"/>
+                   </View>
             </View>
             <View style={styles.imageContainer}>
             <Image  source={{uri: 'https://img.freepik.com/free-photo/top-view-circular-food-frame_23-2148723455.jpg?size=626&ext=jpg&ga=GA1.1.1855402486.1692967268&semt=sph',}} style={styles.image} />
             </View>
             <Text style={styles.text}> This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels if you like</Text>
-            {/* <HeartFilled style={styles.icon}/> */}
+            <View style={{flexDirection: "row"}}>
+
+            <AntDesign name="heart" size={24} color="white" />
+            <View style={{marginLeft:20}}>
+            <AntDesign name="sharealt" size={24} color="white" />
+            </View>
+            <View style={{marginLeft:250}}>
+            <AntDesign name="down" size={24} color="white" />
+            </View>
+            </View>
         </View>
     );
 }
